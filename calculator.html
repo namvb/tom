@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculator</title>
+        <link rel="stylesheet" href="css/menu.css">
+    </head>
+    <body>
+        <div id="header">
+            <div id="menu">
+                <ul>
+                    <li><a href="giadinhtom.html">About</a></li>
+                    <li><a href="botom.html">EXPERIENCE</a></li>
+                    <li><a href="metom.html">PORTFOLIO</a></li>
+                    <li><a href="tom.html">SKILLS</a></li>
+                    <li><a href="xeko.html">AWRDS</a></li>
+                    <li><a href="calculator.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        <h1>Caculator</h1>
+        input number 1 <input type="text" id="n1">
+        <br>
+        <br>
+        input number 2 <input type="text" id="n2">
+        operator
+        <select id="operator">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+        result <input type="text" id="result">
+        <button onclick="myFunction()">Submit</button>
+        <script type="text/javascript">
+            function myFunction(){
+                var n1 = document.getElementById('n1').value;
+                var n2 = document.getElementById('n2').value;
+                var operator = document.getElementById('operator').value;
+                if(operator=="+"){
+                    result = parseInt(n1) + parseInt(n2)
+                }else if(operator=="-"){
+                    result = parseInt(n1) - parseInt(n2)
+                }else if(operator=="*"){
+                    result = parseInt(n1) * parseInt(n2)
+                }else if(operator=="/"){
+                    result = parseInt(n1) / parseInt(n2)
+                }
+                document.getElementById('result').value = result;
+            }
+        </script>
+    </body>
+</html>
